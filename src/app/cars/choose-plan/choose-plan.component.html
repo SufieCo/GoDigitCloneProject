@@ -1,0 +1,114 @@
+<br><br>
+<div class="container justify-content-center">
+
+<div class="container row align-items-center "> 
+    <div class="col-md-3 border rounded-3 shadow-lg ">
+        <div class="mx-auto mt-1">
+        <h4>Comprehensive Cover</h4>
+        <hr>
+ <h3>₹{{compPriceA | number:'.1-2'}} /month</h3>
+<h6 class="text-muted">Covers own damage for 1 year & damage to others for 3 years</h6>
+</div>
+<!-- <button (ngModelChange)="comprehensivePrice()">calculate</button> -->
+
+
+       
+    </div>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+    <br>
+    <div class="col-md-3 border rounded-3 shadow-lg">
+        <div class="mx-auto mt-1">
+       <h4>Third Party Cover</h4> 
+       <hr>
+ <h3>₹887 /month</h3>
+<h6 class="text-muted">Covers only damage to others for 3 years</h6> 
+    </div>
+</div>
+</div>
+<br><br><br>
+<div class="container  ">
+    <div class="col-md-6 border rounded-3 shadow-lg">
+        <div class="mx-3 mt-1 px-3">
+            <!-- <div class="row gx-3 gy-2 align-items-center"> -->
+        <h4>IDV (Insured Value)</h4>
+        
+        <input class="input-group-text mx-auto justify-content-end " type="text" id="id1" [(ngModel)]="inputV" >
+    <!-- </div> -->
+        <label for="customRange2" class="form-label"><h6 class="text-muted">80% of the users select IDV between ₹ 7,44,000 to ₹ 8,55,000</h6></label>
+        <input type="range" class="form-range" min="633000" max="955000" id="customRange2" [(ngModel)]="selectedValue" (ngModelChange)="onValueChange()">
+                <h6><span class="spaced-text">6,30,000</span>
+                    <span class="spaced-text">9,55,000</span></h6>
+<!-- <p>Selected value: {{ selectedValue }}</p> -->
+
+
+        </div>
+
+    </div>
+</div>
+<br><br><br>
+
+<div class="container">
+    <div class="col-md-6 border rounded-3 shadow-lg d-flex row justify-content-center mx-2 mt-1">
+        
+        <h4>Need Help?</h4>
+        <div class="col-md-6 border">
+            <h5 class="mx-4">Chat with us
+                Available 10AM - 7PM</h5>
+        </div>
+        <div class="col-md-6 border">
+            <h5 class="mx-5 mt-2">Get a call back</h5>
+        </div>
+        
+    </div>
+</div>
+<br><br><br>
+<div class="container  ">
+    <div class="col-md-6 border rounded-3 shadow-lg px-3 pt-1">
+        <h4>Add extra coverage (Valid for 1 yr)</h4>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="220" id="flexCheckChecked" [(ngModel)] = "PAcover" (change)="checkBoxChange1()">
+            <label class="form-check-label" for="flexCheckChecked">
+                Personal Accident Cover of ₹15 Lakhs
+                Having a personal accident cover is mandatory
+                <b>₹220</b>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="750" id="flexCheckChecked" [(ngModel)] = "Pcover" (change)="checkBoxChange2()">
+            <label class="form-check-label" for="flexCheckChecked">
+                Passenger Cover
+                <b>₹750</b>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="300" id="flexCheckChecked" [(ngModel)] = "PDcover" (change)="checkBoxChange3()">
+            <label class="form-check-label" for="flexCheckChecked">
+                PA cover for Paid Driver - IMT 17
+               <b>₹300</b> 
+            </label>
+          </div>
+    </div>
+</div>
+<br><br><br>
+<div class="container bg-light text-dark fixed-bottom ">
+    <div class="col-md-10 border rounded-3 shadow-lg pt-2 pb-2 d-flex row justify-content-around">
+        <div class="col-md-10">
+        <h6>
+            <span class="spaced-text1"><b>₹{{total|number:'.1-2'}}</b>/month</span> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="spaced-text"><b>₹{{totaly|number:'.1-2'}}</b> Yearly</span>
+        </h6>
+                <h6 class="text-muted">
+                    <span class="spaced-text1">(Excluding 18% GST)</span>
+                    <span class="spaced-text1">(Excluding 18% GST)</span>
+                </h6>
+                    </div>
+       
+                    <div class="col-md-2">
+        <button class="btn btn-secondary px-5 mt-2" (click)="totalPrice()">Total</button>
+    </div>
+</div>
+</div>
+
+</div>
+
+
+<br><br><br>
